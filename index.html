@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Logitech's Integrated Campaign Management System - Enhance marketing effectiveness through coordinated campaigns and real-time analytics.">
+    <title>Logitech Campaign Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <header class="bg-blue-900 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Logitech Campaign Manager</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#" class="hover:text-gray-300">Dashboard</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Campaigns</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Analytics</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Settings</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container mx-auto p-4">
+        <section class="mb-8">
+            <h2 class="text-xl font-semibold mb-4">Overview</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="p-4 bg-white rounded shadow">
+                    <h3 class="text-lg font-bold">Active Campaigns</h3>
+                    <p class="text-2xl">12</p>
+                </div>
+                <div class="p-4 bg-white rounded shadow">
+                    <h3 class="text-lg font-bold">Total Reach</h3>
+                    <p class="text-2xl">450,000</p>
+                </div>
+                <div class="p-4 bg-white rounded shadow">
+                    <h3 class="text-lg font-bold">Engagement Rate</h3>
+                    <p class="text-2xl">4.5%</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="mb-8">
+            <h2 class="text-xl font-semibold mb-4">Create New Campaign</h2>
+            <form id="campaignForm" class="bg-white p-6 rounded shadow space-y-4">
+                <div>
+                    <label for="campaignName" class="block text-sm font-medium">Campaign Name:</label>
+                    <input type="text" id="campaignName" class="w-full border-gray-300 rounded p-2" required>
+                </div>
+                <div>
+                    <label for="channels" class="block text-sm font-medium">Select Channels:</label>
+                    <select id="channels" class="w-full border-gray-300 rounded p-2">
+                        <option value="social-media">Social Media</option>
+                        <option value="email">Email</option>
+                        <option value="pay-per-click">Pay Per Click</option>
+                    </select>
+                </div>
+                <button type="submit" class="bg-blue-900 text-white px-4 py-2 rounded">Create Campaign</button>
+            </form>
+        </section>
+        
+        <section>
+            <h2 class="text-xl font-semibold mb-4">Recent Campaigns</h2>
+            <ul id="campaignList" class="bg-white p-4 rounded shadow space-y-2">
+                <!-- Campaign items will be dynamically inserted here -->
+            </ul>
+        </section>
+    </main>
+    
+    <footer class="bg-blue-900 text-white p-4">
+        <p class="text-center">&copy; 2023 Logitech. All rights reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
